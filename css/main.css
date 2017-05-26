@@ -1,28 +1,614 @@
+
+*
 * {
-  box-sizing: border-box;
+  box-sizing:border-box;
 }
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
+/**********************************
+*             body
+**********************************/
 body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background: rgba(26,35,126 ,1) url('../assets/images/home.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background: #f0f2ef;
 
-  color: rgba(232,234,246 ,1);
 }
 
-.intro {
-  width: 90vw;
+/***************************************
+*             Content
+***************************************/
 
-  padding: 1rem;
-  margin-top: 1rem;
+.content {
+  margin-bottom: 10em;
+}
 
-  background: rgba(41,182,246 ,1);
-  color: rgba(1,87,155 ,1);
+/**********************************
+*             Header
+**********************************/
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+  background:#bfedef;
+  height: 5.5em;
+  top: 0;
+}
+
+.logo {
+  width: 8em;
+  height: 8em;
+  border: 0.1em #ffcdb2 solid;
+  border-radius: 50%;
+  background-color: #CCCAE6;
+  position: absolute;
+  right: 1.5em;
+  margin-top: 1.5em;
+}
+
+.signature {
+  position: absolute;
+  width: 6em;
+  left: 50%;
+  margin-left: -3em;
+  margin-top: 0.5em;
+}
+
+.hamburgerContainer {
+  position: fixed;
+  cursor: pointer;
+  width: 4em;
+  height: 4em;
+  margin-left: 1.5em;
+  margin-top: 1em;
+  z-index: 9999999999;
+}
+
+.hamburgerMenu, .hamburgerMenu::after, .hamburgerMenu::before {
+  cursor: pointer;
+  position: fixed;
+  width: 3em;
+  height: 0.3em;
+  background-color: black;
+  margin-top: 1.8em;
+  z-index: 9999999999;
+}
+
+.hamburgerMenu::after {
+  content: '';
+  margin-top: -1em;
+  margin-left: 0em;
+  width: 4em;
+}
+
+.hamburgerMenu::before {
+  content: '';
+  margin-top: 1em;
+  margin-left: 0;
+  width: 4em;
+}
+
+/***************************************
+*             Footer
+***************************************/
+
+.footer {
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+  background: #bfedef;
+  height: 5.5em;
+  bottom: 0;
+}
+
+.footer .logo{
+  right: 50%;
+  margin-top: -4.5em;
+  margin-right: -4em;
+
+}
+/***************************************
+*            sociale media
+***************************************/
+.socialMedia {
+  position: fixed;
+}
+
+.facebook , .instagram , .twitter {
+  width: 3em;
+  height: 3em;
+  background: #bfedef;
+  position: absolute;
+  margin-right: -1.5em;
+  margin-top: 1.3em;
+  margin-left: 1.5em;
+
+}
+
+.instagram {
+
+  margin-left: 5em;
+
+}
+
+.twitter {
+
+  margin-left: 8.5em;
+
+}
+
+/***************************************
+*             menu
+***************************************/
+.menu {
+  display: inline-block;
+  position: fixed;
+  z-index: 5;
+  background: #bfedef;
+  width: 18em;
+  height: 100%;
+  top: 0;
+  left: -18em;
+  box-shadow: 0 1em 2em rgba(0,0,0,0.1), 0 2em 2em rgba(0,0,0,0.1);
+}
+
+.menu ul {
+  position: absolute;
+  list-style: none;
+  top: 30%;
+  margin-left: 2em;
+  text-align: center;
+  line-height: 3em;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.6em;
+}
+
+.menu ul li a:hover {
+  color: rgb(200, 200, 200);
+}
+
+.menu a {
+  font-family: 'Roboto Slab', serif;
+}
+
+/***************************************
+*             homepage
+***************************************/
+
+.grid__container {
+  width: 100%;
+}
+
+.content {
+  margin-top: 10em;
+}
+.bol {
+  box-shadow: 0 1em 1em rgba(0,0,0,0.1), 0 1em 1em rgba(0,0,0,0.1);
+  border-radius: 100%;
+  display: block;
+}
+.bol a {
+  font-family: 'Roboto', serif;
+  position: absolute;
+  font-weight: 800;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 100%;
+  text-align: center;
+  padding-top: 43%;
+  text-decoration: none;
+  color: white;
+  font-size: 5em;
+}
+
+.bolContact a {
+  font-size: 4em;
+  padding-top: 36%;
+}
+
+.bolProjects {
+  position: relative;
+
+  width: 40em;
+  height: 40em;
+  background:#ffcdb2;
+
+  margin-bottom: 4em;
+  margin-left:4em;
+}
+
+
+
+.bolAbout {
+  position: relative;
+  width: 30em;
+  height: 30em;
+  background: #ee92c2;
+  margin-bottom: 4em;
+  float: right;
+}
+
+
+.bolLocation {
+  position: relative;
+  width: 30em;
+  height: 30em;
+  background:#ffcdb2;
+  margin-bottom: 4em;
+  margin-left:4em;
+}
+
+
+
+.bolContact {
+  position: relative;
+  width: 20em;
+  height: 20em;
+  background:#ee92c2;
+  margin-bottom: 4em;
+  float: right;
+}
+
+
+/***************************************
+*             projects
+***************************************/
+
+.project {
+  position: relative;
+  display: block;
+  width: 20em;
+  height: 20em;
+  margin-top:3em;
+  margin-bottom: 2em;
+  background-position: center;
+  border-radius: 100%;
+  float: right;
+  background-color: #FAF8F9;
+}
+
+.project1 {
+  background: url("../assets/images/project1.png");
+  background-size: 95%;
+  background-position-x:0.5em;
+  background-position-y: 0.5em;
+}
+
+.project2 {
+  background: url("../assets/images/project2.png");
+  background-size: 95%;
+}
+
+.project3 {
+  background: url("../assets/images/project3.png");
+  background-size: 90%;
+  background-position-x:1em;
+  background-position-y:-3em;
+}
+.project4 {
+  background: url("../assets/images/project4.jpg");
+  background-size: 90%;
+  background-position-x:2em;
+  background-position-y:-3em;
+}
+.project5 {
+  background: url("../assets/images/project5.jpg");
+  background-size: 100%;
+
+}
+.project6 {
+  background: url("../assets/images/project6.jpg");
+  background-size: 100%;
+
+}
+.project7 {
+  background: url("../assets/images/project7.jpg");
+  background-size: 100%;
+
+}
+.project8 {
+  background: url("../assets/images/project8.jpg");
+  background-size: 100%;
+
+}
+.project9 {
+  background: url("../assets/images/project9.jpg");
+  background-size: 100%;
+
+}
+.project10 {
+  background: url("../assets/images/project10.jpg");
+  background-size: 100%;
+
+}
+.project11 {
+  background: url("../assets/images/project11.jpg");
+  background-size: 100%;
+
+}
+.project12 {
+  background: url("../assets/images/project12.jpg");
+  background-size: 100%;
+
+}
+.project13 {
+  background: url("../assets/images/project13.jpg");
+  background-size: 100%;
+
+}
+.project14 {
+  background: url("../assets/images/project14.jpg");
+  background-size: 100%;
+
+}
+.project a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 100%;
+  padding-top: 42%;
+}
+
+/***************************************
+*         individual projects
+***************************************/
+
+.projectInformation {
+  font-family: 'Roboto Slab', serif;
+  color: black;
+  font-size: 4em;
+}
+
+.projectImage { 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projectImage1 {
+  width: 50%;
+  height: 50%;
+}
+
+.projectImage2 {
+  width: 50%;
+  height: 50%;
+}
+
+.projectImage3 {
+  width: 45%;
+  height: 45%;
+}
+.projectImage4 {
+  width: 34%;
+  height: 34%;
+}
+.projectImage5 {
+  width:34%;
+  height:68%;
+}
+.projectImage6 {
+  width: 34%;
+  height: 34%;
+}
+.projectImage7 {
+  width: 34%;
+  height: 34%;
+}
+.projectImage8 {
+  width: 34%;
+  height: 34%;
+}
+.projectImage9 {
+  width: 34%;
+  height: 34%;
+}
+.projectImage10 {
+  width: 34%;
+  height: 34%;
+}
+.projectImage11 {
+  width: 34%;
+  height: 34%;
+}
+.projectImage12 {
+  width: 34%;
+  height: 34%;
+}
+.projectInformation {
+  text-align: center;
+}
+
+.imgZoom {
+  width: 500px;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+}
+ 
+.transition {
+  -webkit-transform: scale(1.5); 
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+/***************************************
+*             about
+***************************************/
+.bolInformation {
+  position: relative;
+  display: block;
+  width: 35em;
+  height: 35em;
+  background-color: #ee92c2;
+  border-radius: 100%;
+  margin: 2em;
+  float: right;
+}
+
+.bolTeam {
+  position: relative;
+  display: block;
+  width: 35em;
+  height: 35em;
+  background-color: #ffcdb2;
+  border-radius: 100%;
+  margin: 2em;
+  float: right;
+}
+
+/***************************************
+*             team
+***************************************/
+.bolTeamlid {
+  position: relative;
+  display: block;
+  width: 35em;
+  height: 35em;
+  background-color: #E4F3F7;
+  border-radius: 100%;
+  margin: 2em;
+  float: right;
+}
+.bolTeamlid1 {
+  background: url("../assets/images/teamlid1.jpg");
+  background-size: 100%;
+}
+
+.bolTeamlid2 {
+  background: url("../assets/images/teamlid2.jpg");
+  background-size: 100%;
+}
+.bolTeamlid3 {
+  background: url("../assets/images/teamlid3.jpg");
+  background-size: 100%;
+}
+ 
+.bolTeamlid1:after, .bolTeamlid2:after, .bolTeamlid3:after {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  content: "Maïté Huylebroeck Teamleader";
+  color: #ee92c2;
+  font-family: 'Roboto Slab', serif;
+  font-size: 2em;
+  text-align: center;
+  line-height: 50%;
+
+}
+
+.shadow:after {
+  display: block;
+  position: relative;
+  transition: opacity 1s; 
+  opacity: 0;
+  background-color: rgba(0,0,0,0.2);
+  margin-bottom: 8.5em ;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+
+}
+
+.bolTeamlid2:after {
+  content: "Viktoria Dyo Social Media Expert";
+}
+
+.bolTeamlid3:after {
+  content: "Maxime Huylebroeck Graphic Designer";
+}
+
+.bolTeamlid1:hover:after, .bolTeamlid2:hover:after, .bolTeamlid3:hover:after  {
+  opacity: 1;
+}
+
+
+/***************************************
+*             information
+***************************************/
+
+.information1 p {
+  background-color: #ffcdb2;
+  box-shadow: 0 1em 2em rgba(0,0,0,0.1), 0 2em 2em rgba(0,0,0,0.1);
+  margin: 5em;
+  font-family: 'Roboto Slab', serif;
+  color: white;
+  text-align: center;
+  padding: 2em;
+  text-align: left;
+  width: 45%;
+  float: left;
+}
+
+.information2 p {
+  background-color: #ffcdb2;
+  box-shadow: 0 1em 2em rgba(0,0,0,0.1), 0 2em 2em rgba(0,0,0,0.1);
+  margin: 5em;
+  font-family: 'Roboto Slab', serif;
+  color: white;
+  text-align: center;
+  padding: 2em;
+  text-align: right;
+  width: 45%;
+  float: right;
+}
+
+/***************************************
+*             contact
+***************************************/
+.contact  {
+  box-shadow: 0 1em 2em rgba(0,0,0,0.1), 0 2em 2em rgba(0,0,0,0.1);
+  line-height: 2em;
+  float: none;
+  text-align: center;
+  padding: 2em;
+  width: 50%;
+  height: 100%;
+  margin-top: 5em;
+  margin-left: auto ;
+  margin-right: auto ;
+  font-family: 'Roboto Slab', serif;
+  color: white;
+  background-color: #ffcdb2;
+  
+}
+
+.contact2 {
+  margin-top: 2em;
+}
+
+.button {  
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  float: none;
+}
+
+/***************************************
+*             text
+***************************************/
+
+
+hr {
+  margin: 5em;
+  color: #ee92c2;
+}
+
+.teamPosition {
+  font-family: 'Roboto Slab', serif;
+  color: #ffcdb2;
+  font-size: 1em;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 3em;
+  text-align: center;
 }
