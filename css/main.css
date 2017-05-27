@@ -7,9 +7,8 @@
 *             body
 **********************************/
 body {
-  background: #f0f2ef;
   font-family: 'Roboto Slab', serif;
-
+  background: #f0f2ef;
 }
 
 /***************************************
@@ -574,6 +573,48 @@ body {
   float: none;
 }
 
+/***************************************
+*             styleguide
+***************************************/
+.top {
+  margin-top: 10em;
+}
+
+.top .styleguide {
+  margin-top: 0;
+ }
+
+.title {
+  z-index: 999;
+  background-color: #ee92c2;
+  padding: 0.5em;
+  box-shadow: 0 1em 1em rgba(0,0,0,0.1), 0 1em 1em rgba(0,0,0,0.1);
+}
+ 
+ br {
+   margin: 1em;
+ }
+
+ .color1 {
+   background-color: #ee92c2 ;
+ }
+
+  .color2 {
+   background-color: #ffcdb2 ;
+ }
+
+ .color3 {
+   background-color: #bfedef ;
+ }
+
+ .send {
+   margin-top: 5em;
+ }
+
+ .styleguide {
+   margin-top: 3em;
+    margin-left: 5em;
+}
 /***************************************
 *             text
 ***************************************/
